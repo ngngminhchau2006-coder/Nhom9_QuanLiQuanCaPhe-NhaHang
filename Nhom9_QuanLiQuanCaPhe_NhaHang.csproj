@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net9.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWindowsForms>true</UseWindowsForms>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.14" />
+        <None Update="Database\CafeManagement.sql">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="UC_ManHinhChinh.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="UC_SanPham.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+    </ItemGroup>
+
+</Project>
